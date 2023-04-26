@@ -10,8 +10,8 @@ const kWeekdayNames = <String>[
   "Miercoles",
   "Jueves",
   "Viernes",
-  "Sabado"
-      "Domingo",
+  "Sabado",
+  "Domingo",
 ];
 const kWeekdayShortNames = <String>[
   "Lun",
