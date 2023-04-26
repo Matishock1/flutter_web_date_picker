@@ -81,7 +81,7 @@ class _WebDatePickerState extends State<_WebDatePicker> {
             alignment: Alignment.center,
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: Text(e,
-                style: textStyle!.copyWith(fontWeight: FontWeight.w500)),
+                style: textStyle!.copyWith(fontWeight: FontWeight.w800)),
           ),
         )
         .toList();
