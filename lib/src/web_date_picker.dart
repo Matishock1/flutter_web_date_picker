@@ -85,8 +85,15 @@ class _WebDatePickerState extends State<_WebDatePicker> {
           ),
         )
         .toList();
-    for (int i = 1; i < kNumberCellsOfMonth; i++) {
-      final date = monthDateRange.start.add(Duration(days: i));
+    for (int i = 0; i < kNumberCellsOfMonth; i++) {
+      final dateRangeStart = monthDateRange.start;
+      final date = DateTime(
+          dateRangeStart.year,
+          dateRangeStart.month,
+          dateRangeStart.day + i,
+          dateRangeStart.hour,
+          dateRangeStart.minute,
+          dateRangeStart.second);
       if (_startDate.month == date.month) {
         final isEnabled = (date.dateCompareTo(widget.firstDate) >= 0) &&
             (date.dateCompareTo(widget.lastDate) <= 0);

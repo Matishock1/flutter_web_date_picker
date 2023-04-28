@@ -63,7 +63,9 @@ extension DateTimeExtension on DateTime {
       {bool includeTrailingAndLeadingDates = false}) {
     DateTime start = DateTime(year, month);
     if (includeTrailingAndLeadingDates) {
-      start = start.subtract(Duration(days: start.weekday % kNumberOfWeekday));
+      final int offset =
+          start.weekday == DateTime.sunday ? 6 : start.weekday - 1;
+      start = start.subtract(Duration(days: offset));
     }
     DateTime end = includeTrailingAndLeadingDates
         ? start.add(const Duration(days: kNumberCellsOfMonth))

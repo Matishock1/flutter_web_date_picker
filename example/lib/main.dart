@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
                 final pickedDate = await showWebDatePicker(
                   context: textFieldKey.currentContext!,
                   initialDate: _selectedDate,
-                  firstDate: DateTime.now().add(const Duration(days: 1)),
+                  firstDate: DateTime(1994),
                   lastDate: DateTime.now().add(const Duration(days: 14000)),
                   width: 300,
                 );
